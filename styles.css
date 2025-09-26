@@ -1,1 +1,71 @@
+:root{
+  --bg: #0b0f12;
+  --panel: #0f1720;
+  --muted: #2e3236;
+  --text: #cbd5e1;
+
+  --c0: #222426; /* 0 */
+  --c1: #2f6f43; /* low */
+  --c2: #2da55d; /* med */
+  --c3: #28a745; /* high */
+  --c4: #1f7f3a; /* max */
+}
+
+html,body{
+  height:100%;
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: Inter, Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.lc-widget{
+  box-sizing: border-box;
+  padding: 12px;
+  width: 100%;
+  max-width: 700px;
+  margin: 18px auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0));
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.03);
+  min-height: 72px;
+}
+
+/* tooltip (for non-SVG fallback) */
+.lc-tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: #111;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  z-index: 9999;
+  display: none;
+}
+
+/* small helper text below */
+.lc-footer {
+  margin-top: 8px;
+  color: #9aa6b2;
+  font-size: 12px;
+}
+
+/* svg text labels (month names) */
+.lc-month {
+  fill: var(--text);
+  font-size: 11px;
+  font-family: inherit;
+}
+
+/* responsive: allow the widget to shrink in narrow layouts */
+@media (max-width:420px){
+  .lc-widget{
+    padding:8px;
+    border-radius:6px;
+  }
+}
 
